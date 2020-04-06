@@ -64,6 +64,44 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-setup-a-software" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/04/06/setup-a-software/" class="article-date">
+  <time datetime="2020-04-06T08:10:25.000Z" itemprop="datePublished">2020-04-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/04/06/setup-a-software/">setup a software</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">yum -y install vim wget net-tools</span><br><span class="line">systemctl stop NetworkManager</span><br><span class="line">systemctl <span class="built_in">disable</span> NetworkManager</span><br><span class="line">mount /dev/sr0 /mnt</span><br><span class="line"><span class="built_in">cd</span> /tmp/</span><br><span class="line">tar -xf /mnt/VMwareTools-10.3.21-14772444.tar.gz </span><br><span class="line">./vmware-tools-distrib/vmware-install.pl </span><br><span class="line">systemctl stop firewalld</span><br><span class="line">systemctl <span class="built_in">disable</span> firewalld</span><br><span class="line">vim /etc/selinux/config </span><br><span class="line">vim /etc/sysconfig/network-scripts/ifcfg-ens192 </span><br><span class="line">systemctl restart network</span><br><span class="line">yum -y install httpd</span><br><span class="line">systemctl <span class="built_in">enable</span> httpd</span><br><span class="line">systemctl start httpd</span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$HOSTNAME</span> &gt;&gt; /var/www/html/index.html</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/04/06/setup-a-software/" data-id="ck8o706pd0001ao4r8fudg719" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/work/" rel="tag">work</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/04/06/hello-world/" class="article-date">
@@ -106,44 +144,6 @@
       <a data-url="http://yoursite.com/2020/04/06/hello-world/" data-id="ck8o706p80000ao4r57xghrdb" class="article-share-link">Share</a>
       
       
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-setup-a-software" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/04/06/setup-a-software/" class="article-date">
-  <time datetime="2020-04-06T07:32:25.000Z" itemprop="datePublished">2020-04-06</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/06/setup-a-software/">setup a software</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">yum -y install vim wget net-tools</span><br><span class="line">systemctl stop NetworkManager</span><br><span class="line">systemctl <span class="built_in">disable</span> NetworkManager</span><br><span class="line">mount /dev/sr0 /mnt</span><br><span class="line"><span class="built_in">cd</span> /tmp/</span><br><span class="line">tar -xf /mnt/VMwareTools-10.3.21-14772444.tar.gz </span><br><span class="line">./vmware-tools-distrib/vmware-install.pl </span><br><span class="line">systemctl stop firewalld</span><br><span class="line">systemctl <span class="built_in">disable</span> firewalld</span><br><span class="line">vim /etc/selinux/config </span><br><span class="line">vim /etc/sysconfig/network-scripts/ifcfg-ens192 </span><br><span class="line">systemctl restart network</span><br><span class="line">yum -y install httpd</span><br><span class="line">systemctl <span class="built_in">enable</span> httpd</span><br><span class="line">systemctl start httpd</span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$HOSTNAME</span> &gt;&gt; /var/www/html/index.html</span><br></pre></td></tr></table></figure>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/04/06/setup-a-software/" data-id="ck8o706pd0001ao4r8fudg719" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/work/" rel="tag">work</a></li></ul>
-
     </footer>
   </div>
   
@@ -196,11 +196,11 @@
       <ul>
         
           <li>
-            <a href="/2020/04/06/hello-world/">Hello World</a>
+            <a href="/2020/04/06/setup-a-software/">setup a software</a>
           </li>
         
           <li>
-            <a href="/2020/04/06/setup-a-software/">setup a software</a>
+            <a href="/2020/04/06/hello-world/">Hello World</a>
           </li>
         
       </ul>
